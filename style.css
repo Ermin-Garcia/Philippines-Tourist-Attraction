@@ -6,7 +6,9 @@
     font-family: sans-serif, serif;   
 }
 body {
-    padding: 0 14%;
+    width: min(100%, 63rem);
+    margin-inline: auto;
+    padding: 0 2%;
     background: #fff;
 }
 p {
@@ -14,37 +16,38 @@ p {
     letter-spacing: 1.6px;
     line-height: 20px;
 }
-.mywork-section {
+.project-section {
     position: relative;  
     width: 100%;
     height: 100vh;
     display: flex;
 }                   
-.mywork-section-heading {
+.project-section-heading {
     margin-top: 0;
     width: 100%;
     height: 10%;
     z-index: 2;
 }
-.mywork-section-heading h1 {
+.project-section-heading h1 {
     text-align: center;
     align-content: center;
-    padding: 2%;
-    background: #eee;
-    font-size: 2rem;
+    padding: 2% 0;
+    background: #2c2c2c;
+    font-size: 2.5rem;
     letter-spacing: 3.2px;
-    color: #2c2c2c;
+    color: #fff;
     font-family: sans-serif;
     animation: animate 1s ease-in-out forwards;
 }                 
-#mywork-container {
+#project-container {
     width: 100%;
     height: 100%;
     position: absolute;
     background-size: cover;
     object-fit: cover;
+    background-position: center;
 } 
-.mywork-item {
+.project-item {
     width: 23%;
     height: 30%;
     display: inline-block; 
@@ -54,10 +57,10 @@ p {
     top: 23%;
     transition: .5s; 
     border-radius: 20px; 
-    box-shadow: 5px 5px 10px #222;
+    box-shadow: 2px 2px 5px #222;
 }   
-#mywork-container .mywork-item:nth-child(1), 
-#mywork-container .mywork-item:nth-child(2) { 
+#project-container .project-item:nth-child(1), 
+#project-container .project-item:nth-child(2) { 
     left: 0;
     top: 0; 
     border-radius: 0;
@@ -65,22 +68,22 @@ p {
     height: 100%; 
     box-shadow: none;
 } 
-#mywork-container .mywork-item:nth-child(3) {
+#project-container .project-item:nth-child(3) {
     left: calc(4%);
 } 
-#mywork-container .mywork-item:nth-child(4) {
+#project-container .project-item:nth-child(4) {
     left: calc(28%);
 } 
-#mywork-container .mywork-item:nth-child(5) {
+#project-container .project-item:nth-child(5) {
     left: calc(52%);
 } 
-#mywork-container .mywork-item:nth-child(n+6) {
+#project-container .project-item:nth-child(n+6) {
     left: calc(76%); 
     opacity: 0;  
 } 
-.mywork-item .mywork-content {
+.project-item .project-content {
     padding: 5px;
-    background: #eee;
+    background: #fff;
     position: absolute; 
     top: 54%;
     left: 4%; 
@@ -90,25 +93,25 @@ p {
     border-radius: 3px;
     animation: animate 1s ease-in-out forwards;
 }
-.mywork-item:nth-child(2) .mywork-content {
+.project-item:nth-child(2) .project-content {
     display: block;           
 } 
-.mywork-content h2 {
+.project-content h2 {
     width: 100%; 
     align-content: center; 
-    color: #2c2c2c;
+    color: #000;
     font-weight: 500;
     letter-spacing: 2.4px; 
 } 
-.mywork-content p {
-    color: #2c2c2c;
+.project-content p {
+    color: #000;
     padding-top: 2px; 
 } 
-.mywork-content a {
+.project-content a {
     font-size: 1rem;
     letter-spacing: 1.6px;
 }
-.mywork-content a:hover {
+.project-content a:hover {
     cursor: pointer;
     text-decoration: underline 2px;
 }
@@ -122,20 +125,20 @@ p {
         transform: translate(0, 0);
     }
 } 
-#mywork-container .mywork-btn-arrow {
+#project-container .project-btn-arrow {
     text-align: center;
     width: 100%; 
     position: absolute;
     bottom: 3%;
     z-index: 2;
 }
-.mywork-btn-arrow button {
+.project-btn-arrow button {
     margin: 0 1%;
     width: 3rem;  
     border: none;
     background: none;  
 } 
-#mywork-container .mywork-btn-arrow img {
+#project-container .project-btn-arrow img {
     padding: 5%;
     width: 60%;
     border-radius: 5px;
@@ -146,210 +149,154 @@ p {
     font-weight: 500;
     transition: .3s; 
 } 
-#mywork-container .mywork-btn-arrow img:hover {
+#project-container .project-btn-arrow img:hover {
     background-color: #aaa;
 } 
-/*Philippine sub Tourist Attraction*/
-.tourist-link {
+.tour-section a {
+    text-decoration: none;
     position: fixed; 
     font-size: 1rem;
     top: 18%;
     letter-spacing: 1.6px;
     padding: 10px;
     align-content: center;
-    color: #eee;
+    color: #fff;
     border-radius: 0 20px 20px 0;
     background: #4356ff;
     border: none;
     z-index: 1;
 }
-.tourist-link:hover {
+.tour-section a:hover {
     cursor: pointer;
     text-decoration: underline 2px;
 }
+.tour-heading h1 {  
+    padding: 2%;
+    background: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    font-size: 3rem;
+    letter-spacing: 4.8px;
+}
+.tour-content p {
+    padding: 1%;
+    color: #000;
+    line-height: 1.5rem;
+    letter-spacing: 1.6px;
+    background: #fff
+}
 /*Banaue Rice Terraces*/
-.banaue-sub-heading { 
+.banaue-content-heading { 
     background-image: url(images/banaue-terraces.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
+    background-position: center;
 }
-.banaue-sub-heading h2 {
+.content-heading h2 {
     position: absolute; 
-    color: #2c2c2c; 
+    text-align: center;
+    color: #fff; 
     bottom: 0;  
     width: 100%;
     padding: 10px;
     letter-spacing: 2.4px;
-    background: #ddd;
+    background: #2c2c2c;
 }
-.banaue1-sub-heading { 
+.banaue-content-heading1 { 
     background-image: url(images/banaue1-terraces.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
-}
-.banaue1-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
+    background-position: center;
 }
 /*Mt. Mayon*/
-.tour-section {  
-    width: 100%;
-    height: 100vh;
-}
-.tour-heading h1 {  
-    padding: 5% 0 2%;
-    color: #2c2c2c;
-    text-align: center;
-    align-content: center;
-    font-size: 2.5rem;
-    letter-spacing: 4.8px;
-    background: #eee;
-}
-.tour-content {
-    text-align: center;
-}
-.tour-sub-heading { 
+.mtmayon-content-heading { 
     background-image: url(images/mtmayon.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
-.tour-sub-heading h2 { 
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
-   
-}
-.tour-content p {
-    color: #2c2c2c;
-    background: #eee;
-    padding: 1rem;
-    letter-spacing: 1.9px;
-    line-height: 1.5rem;
-}
-.tour1-sub-heading { 
+.mtmayon-content-heading1 { 
     background-image: url(images/mtmayon1.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
-    background-repeat: no-repeat; 
-}
-.tour1-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
+    background-position: center;
 }
 /*Intramuros*/
-.intramuros-sub-heading { 
+.intramuros-content-heading { 
     background-image: url(images/intramuros.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
-.intramuros-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
-}
-.intramuros1-sub-heading { 
+.intramuros-content-heading1 { 
     background-image: url(images/intramuros1.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
-    position: relative;
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-.intramuros1-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
-}
-/*Chocolate Hills*/
-.chocohills-sub-heading { 
-    background-image: url(images/chocohills.jpg);
-    background-attachment: fixed;
-    width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
-.chocohills-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
-    width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
-}
-.chocohills1-sub-heading { 
-    background-image: url(images/chocohills1.jpg);
+/*Chocolate Hills*/
+.chocohills-content-heading { 
+    background-image: url(images/chocohills.jpg);
     background-attachment: fixed;
     width: 100%;
-    height: 40rem;
+    padding: 28% 0;
     position: relative;
     object-fit: cover;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
-.chocohills1-sub-heading h2 {
-    position: absolute; 
-    color: #2c2c2c; 
-    bottom: 0;  
+.chocohills-content-heading1 { 
+    background-image: url(images/chocohills1.jpg);
+    background-attachment: fixed;
     width: 100%;
-    padding: 10px;
-    letter-spacing: 2.4px;
-    background: #ddd;
+    padding: 28% 0;
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 /*Responsive Design*/
-@media screen and (max-width: 1200px) {
-    body {
-        padding: 0;
+@media screen and (max-width: 768px) {
+    .tour-heading h1 {
+        font-size: 6.2vw;
     }
+    .content-heading {
+        padding: 13rem 0;
+    }     
+}
+@media screen and (max-width: 481px) {
+    .project-section-heading h1 {
+        font-size: 8.3vw;
+    }
+    .content-heading h2 {
+        font-size: 5.2vw;
+    }
+    
 }
 
 
